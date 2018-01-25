@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: eureka-invoke
+
+
+server:
+  port: 8082
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: 172.16.43.11:${server.port}
+
+  client:
+    service-url:
+      defaultZone: http://cheng:123@peer2:2222/eureka/,http://cheng:123@peer1:1111/eureka/
+security:
+  basic:
+    enabled: false
+info:
+  app:
+    name: eureka-invoker
+    version: v1.0

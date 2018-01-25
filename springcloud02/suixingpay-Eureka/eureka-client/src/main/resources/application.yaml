@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: eureka-provider
+
+# 定位模板的目录
+  mvc:
+    view:
+      prefix: classpath:/templates/
+      # 给返回的页面添加后缀名
+      suffix: .html
+server:
+  port: 8081
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: 172.16.43.11:${server.port}
+
+  client:
+    service-url:
+      defaultZone: http://cheng:123@peer2:2222/eureka/,http://cheng:123@peer1:1111/eureka/
+
+security:
+  basic:
+    enabled: false
+
+info:
+  app:
+    name: eureka-provider
+    version: v1.0

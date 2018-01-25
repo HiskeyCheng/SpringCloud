@@ -1,0 +1,27 @@
+# eureka点击查看的信息
+info:
+  app:
+    name: eureka:peer1
+    version: v1.0
+# 应用名字
+spring:
+  application:
+    name: eureka
+# actuator 是否需要安全认证
+management:
+  security:
+    enabled: false
+server:
+  port: 1111
+eureka:
+  instance:
+    hostname: peer1
+    prefer-ip-address: true
+    instance-id: 172.16.43.11:${server.port}
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://cheng:123@peer2:2222/eureka/
+
+

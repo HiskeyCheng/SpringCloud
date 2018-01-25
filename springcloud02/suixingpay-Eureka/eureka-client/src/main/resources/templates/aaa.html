@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+</head>
+<script type="text/javascript"  src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+
+$(function () {
+var lists = new Array();
+lists.push("a1");
+lists.push("b2");
+console.info("aaa");
+    $.ajax({
+        url:"/testajax",
+        type:"get",
+        datatype:"json",
+        data:{
+            "lists":lists
+        },
+        //contentType:"application/json",
+        //data:JSON.stringify(lists),
+        success:function(data){
+
+        }
+    })
+    
+})
+
+
+</script>
+<body>
+aaaaa
+</body>
+</html>
