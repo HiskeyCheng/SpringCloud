@@ -27,9 +27,7 @@ public class testController {
 
     @GetMapping("/testController")
     public String testCon() {
-
-        return "aaa";
-
+        return "test";
     }
 
 
@@ -44,5 +42,7 @@ public class testController {
         //Arrays.stream(lists).collect(Collectors.toMap())
         return "success";
     }
+
+
 
 }
