@@ -20,7 +20,7 @@ import java.util.concurrent.FutureTask;
  */
 
 public class CallableThreadTest implements Callable<Integer> {
-    private String test = "test";
+
     public static void main(String[] args) {
         CallableThreadTest ctt = new CallableThreadTest();
         FutureTask<Integer> ft = new FutureTask<>(ctt);
